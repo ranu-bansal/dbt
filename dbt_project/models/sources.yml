@@ -1,0 +1,43 @@
+version: 2
+sources:
+  - name: raw
+    description: Raw CSV datasets loaded by the ETL loader into DuckDB schema `raw` before each dbt run.
+    schema: raw
+    tables:
+      - name: orders
+        description: One row per e-commerce order (US, UK, CA).
+        columns:
+          - name: order_id
+            description: Unique order identifier.
+          - name: customer_id
+            description: FK to customers.
+          - name: order_date
+            description: Order placement date.
+          - name: country
+            description: Order country code (US, UK, CA).
+          - name: currency
+            description: Order currency (USD, GBP, CAD).
+          - name: status
+            description: Order lifecycle status.
+          - name: total_amount
+            description: Order total in order currency.
+      - name: customers
+        description: Registered customers.
+        columns:
+          - name: customer_id
+            description: Unique customer identifier.
+          - name: country
+            description: Customer primary country.
+      - name: products
+        description: Product catalog by luxury brand.
+      - name: order_items
+        description: Line items per order.
+        columns:
+          - name: order_id
+            description: FK to orders.
+          - name: product_id
+            description: FK to products.
+          - name: quantity
+            description: Units ordered.
+          - name: subtotal
+            description: Line revenue.

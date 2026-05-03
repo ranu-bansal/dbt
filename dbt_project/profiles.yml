@@ -1,0 +1,7 @@
+# Path is set at runtime by custom layer via DBT_PROFILES_DIR and env
+quince:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('QUINCE_DUCKDB_PATH', ':memory:') }}"

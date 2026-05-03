@@ -1,0 +1,12 @@
+name: sales_by_brand_country
+description: Daily sales by brand and country (dbt)
+# Must match logical inputs (and dbt refs) so --all runs stg_orders before this mart.
+inputs:
+  - stg_orders
+  - order_items
+  - products
+transform:
+  type: dbt
+  model: sales_by_brand_country
+output: sales_by_brand_country
+# Validation via dbt tests (schema.yml)

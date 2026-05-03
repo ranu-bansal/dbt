@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: orders_enriched
+    description: Orders with customer country and is_domestic flag
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: country
+        tests:
+          - accepted_values:
+              values: ['US', 'UK', 'CA']
+              quote: true
+  - name: sales_by_brand_country
+    description: Daily sales by brand and country
+    columns:
+      - name: brand_id
+        tests: [not_null]
+      - name: country
+        tests:
+          - accepted_values:
+              values: [ 'US', 'UK', 'CA' ]
+              quote: true

@@ -1,0 +1,15 @@
+# Dataset registry: name -> path (relative to project root), optional schema
+# Curated paths use latest.csv so downstream pipelines read from latest run
+datasets:
+  orders:
+    path: data/raw/orders.csv
+    type: raw
+  customers:
+    path: data/raw/customers.csv
+    type: raw
+  products:
+    path: data/raw/products.csv
+    type: raw
+  order_items:
+    path: data/raw/order_items.csv
+    type: raw

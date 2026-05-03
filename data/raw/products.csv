@@ -1,0 +1,7 @@
+product_id,brand_id,brand_name,category,product_name,unit_price_usd,currency,created_at
+P001,B1,Quince Cashmere,Sweaters,Merino Crew Neck,89.00,USD,2024-01-15 10:00:00
+P002,B1,Quince Cashmere,Sweaters,Cashmere V-Neck,129.00,USD,2024-01-15 10:00:00
+P003,B2,Quince Leather,Outerwear,Leather Moto Jacket,298.00,USD,2024-01-16 09:00:00
+P004,B2,Quince Leather,Pants,Italian Wool Trousers,98.00,USD,2024-01-16 09:00:00
+P005,B3,Quince Linen,Tops,Linen Button-Down,68.00,USD,2024-01-17 11:00:00
+P006,B3,Quince Linen,Pants,Linen Wide-Leg,78.00,USD,2024-01-17 11:00:00

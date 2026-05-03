@@ -1,0 +1,10 @@
+name: orders_enriched
+description: Orders with customer country and is_domestic (dbt, refs stg_orders)
+inputs:
+  - stg_orders
+  - customers
+transform:
+  type: dbt
+  model: orders_enriched
+output: orders_enriched
+# Validation via dbt tests (schema.yml)

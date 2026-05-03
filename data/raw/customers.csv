@@ -1,0 +1,6 @@
+customer_id,country,email,first_order_date,created_at,last_updated
+C101,US,alice@example.com,2024-01-20,2024-01-20 10:00:00,2024-01-20 10:00:00
+C102,CA,bob@example.com,2024-01-22,2024-01-20 10:00:00,2024-01-20 10:00:00
+C103,CA,carol@example.com,2024-02-01,2024-01-20 10:00:00,2024-01-20 10:00:00
+C104,UK,dave@example.com,2024-02-05,2024-02-05 10:20:00,2024-01-20 10:00:00
+C105,US,eve@example.com,2024-02-07,2024-02-07 13:00:00,2024-02-07 13:00:00

@@ -1,0 +1,4 @@
+version: 2
+analyses:
+  - name: pipeline_runs
+    description: "{{ doc('pipeline_runs') }}"

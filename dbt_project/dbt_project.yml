@@ -1,0 +1,17 @@
+name: 'quince'
+version: '1.0.0'
+config-version: 2
+profile: 'quince'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+docs-paths: ["docs"]
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  quince:
+    staging:
+      +schema: staging
+    marts:
+      +schema: marts

@@ -1,0 +1,9 @@
+name: stg_orders
+description: Staging orders (dbt) - cleaned orders, upstream for orders_enriched
+inputs:
+  - orders
+transform:
+  type: dbt
+  model: stg_orders
+output: stg_orders
+# Validation via dbt tests (schema.yml)
