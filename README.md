@@ -6,7 +6,7 @@ The **custom layer** loads raw CSVs into DuckDB and handles run log + CSV publis
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # or .venv\Scripts\activate on Windows
+source .venv/bin/activate   # or .venv/Scripts/activate on Windows
 pip install -r requirements.txt
 ```
 
@@ -88,10 +88,10 @@ duckdb data/warehouse.duckdb
 show databases;
 show all tables;
 select * from raw.order_items;
-select * from '/Users/bhavesharora/PycharmProjects/quince_demo/data/raw/customers.csv';
+select * from '/Users/RANU/PycharmProjects/quince_demo/data/raw/customers.csv';
 
 
-cd /Users/bhavesharora/PycharmProjects/quince_demo
+cd /Users/RANU/PycharmProjects/quince_demo
 export QUINCE_DUCKDB_PATH="$(pwd)/data/warehouse.duckdb"
 export DBT_PROFILES_DIR="$(pwd)/dbt_project"
 dbt run --full-refresh --select sales_by_brand_country --project-dir dbt_project

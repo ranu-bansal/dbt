@@ -87,7 +87,7 @@ def write_dbt_doc_pipeline_runs(limit: int = 10, project_root: Path | None = Non
     doc_dir.mkdir(parents=True, exist_ok=True)
     path = doc_dir / "pipeline_runs.md"
     wrapped = "{% docs pipeline_runs %}\n" + body + "\n{% enddocs %}\n"
-    path.write_text(wrapped)
+    path.write_text(wrapped,encoding="utf-8")
     return path
 
 
@@ -96,6 +96,6 @@ def write_run_history_doc(limit: int = 10, project_root: Path | None = None) -> 
     root = project_root or get_project_root()
     out = root / "docs" / "RUN_HISTORY.md"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(format_run_history_markdown(limit=limit, project_root=root))
+    out.write_text(format_run_history_markdown(limit=limit, project_root=root),encoding="utf-8")
     write_dbt_doc_pipeline_runs(limit=limit, project_root=root)
     return out
